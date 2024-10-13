@@ -1,5 +1,5 @@
 <template>
-    <h1>Vue</h1>
+   <NuxtPage />
 </template>
 
 <script setup lang="ts">
