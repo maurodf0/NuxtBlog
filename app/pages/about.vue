@@ -20,4 +20,8 @@
     //     layout: 'another'
     // })
 
+    useHead({
+        title: 'About Page'
+    })
+
 </script>

@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Mauro De Falco',
+  title: 'Homepage',
   description: 'Some New Nuxt Content',
   ogTitle: '[og:title]',
   ogDescription: '[og:description]',

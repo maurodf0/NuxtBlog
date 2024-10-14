@@ -15,3 +15,11 @@
         </main>
     </div>
 </template>
+
+<script setup>
+
+    // %s is the title of the single page
+    useHead({
+        titleTemplate: '%s - Mauro De Falco'
+    })
+</script>
