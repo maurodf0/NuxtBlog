@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-    // %s is the title of the single page
+    // %s is the title of the single page like subfiss
     //than add custom font from google
     useHead({
   titleTemplate: '%s - Mauro De Falco',
