@@ -17,9 +17,20 @@
 </template>
 
 <script setup>
-
     // %s is the title of the single page
+    //than add custom font from google
     useHead({
-        titleTemplate: '%s - Mauro De Falco'
-    })
+  titleTemplate: '%s - Mauro De Falco',
+  link: [
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.googleapis.com'
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+      crossorigin: ''
+    }
+  ]
+})
 </script>
