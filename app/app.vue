@@ -1,18 +1,7 @@
 <template>
-    <nav>
-        <ul>
-            <li>
-                <NuxtLink to="/">Main</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/about">About</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/blog">Blog</NuxtLink>
-            </li>
-        </ul>
-    </nav>
-   <NuxtPage />
+    <NuxtLayout>
+        <NuxtPage />
+    </NuxtLayout>
 </template>
 
 <script setup lang="ts">
