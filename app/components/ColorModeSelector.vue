@@ -1,6 +1,6 @@
 <template>
     <div>
-       <button @click="toggleMode"> {{ nextMode }}</button>
+       <button @click="toggleMode"> {{ nextModeIcon }}</button>
     </div>
 </template>
 
@@ -14,6 +14,12 @@ const modes = [
     'dark'
 ]
 
+const nextModeIcons = {
+  system: '🌓',
+  light: '🌕',
+  dark: '🌑'
+}
+
 const nextMode = computed( () => {
     const currentModeIndex = modes.indexOf(colorMode.preference);
     let nextModeIndex = null
@@ -25,6 +31,10 @@ const nextMode = computed( () => {
 
     return modes[nextModeIndex];
 });
+
+const nextModeIcon = computed ( () => {
+    return nextModeIcons[nextMode.value];
+})
 
 const toggleMode = () => {
     return colorMode.preference = nextMode.value;
