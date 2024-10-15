@@ -1,11 +1,16 @@
 <template>
-    <div>
-       <button @click="toggleMode"> {{ nextModeIcon }}</button>
+    <div class="flex space-x-2 items-center">
+        <div class="text-gray-500 text-xs" v-if="showNextModeLabel">Change To {{ nextMode }}</div>
+       <button 
+        @click="toggleMode"
+        @mouseenter="showNextModeLabel = true"
+        @mouseleave="showNextModeLabel = false"
+        class="hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 text-gray-500 rounded-md"> {{ nextModeIcon }}</button>
     </div>
 </template>
 
 <script setup>
-
+const showNextModeLabel = ref(false)
 const colorMode = useColorMode();
 
 const modes = [
