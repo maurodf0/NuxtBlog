@@ -32,7 +32,10 @@
       crossorigin: ''
     }
   ]
-})
+});
+
+
+const colorMode = useColorMode();
 </script>
 
 <style>
