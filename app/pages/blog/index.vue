@@ -1,9 +1,9 @@
 <template>
-    <div v-if="result">
+    <div v-if="data">
         <section>
         <ul>
             <li class="rounded-lg border-gray-700 dark:border-gray-100 mb-4 border py-4 px-4"
-                v-for="(post, index) in result" 
+                v-for="(post, index) in data" 
                 :key="post.title"> 
              <NuxtLink :to="post._path" >   {{ index }} - {{ post.title }} </NuxtLink> 
             </li>
@@ -14,6 +14,6 @@
 </template>
 
 <script setup>
- const result = await queryContent('/blog').only(['_path', 'title']).find()
+ const { data, error  } = await ('blog-list', () => queryContent('/blog').only(['_path', 'title']).find()); 
 
 </script>
