@@ -1,7 +1,10 @@
 <template>
     <h1>About me!</h1>
-    <button @click="enableCustomLayout">Update Layout</button>
-    <button @click="defaultLayout">Go Back Layout</button>
+    <ContentDoc class="mb-10 prose dark:prose-invert prose-h1:text-5xl" path="/about" />
+        <div class="flex gap-4">
+            <button @click="enableCustomLayout">Update Layout</button>
+            <button @click="defaultLayout">Go Back Layout</button>
+        </div>
 </template>
 
 <script setup lang="ts">
