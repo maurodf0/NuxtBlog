@@ -14,6 +14,10 @@
 </template>
 
 <script setup>
- const { data, error } = await useAsyncData('blog-list', () => queryContent('/blog').only(['_path', 'title']).find()); 
+ const { data } = await useAsyncData('blog-list', 
+ () => queryContent('/blog')
+ .where({_path: {$ne: '/blog'}})
+ .only(['_path', 'title'])
+ .find()); 
 
 </script>
