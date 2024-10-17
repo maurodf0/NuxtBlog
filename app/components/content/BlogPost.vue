@@ -11,7 +11,7 @@
                 :key="post.title"> 
              <NuxtLink 
              :to="post._path"
-             class="column" > <div class="text-gray-500">2023</div> <div>{{ post.title }}</div> </NuxtLink> 
+             class="column hover:bg-gray-100 dark:hover:bg-gray-800" > <div class="text-gray-500">2023</div> <div>{{ post.title }}</div> </NuxtLink> 
             </li>
         </ul>
     </section>
