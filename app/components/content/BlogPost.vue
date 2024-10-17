@@ -40,7 +40,6 @@
 
     for (const p of data.value){
         const year = new Date(p.publishedAt).getFullYear();
-        console.log(year);
         const displayYear = year != lastYear;
         p.displayYear = displayYear
         result.push(p);
