@@ -1,5 +1,5 @@
 <template>
-    <div v-if="data">
+    <div v-if="posts">
         <section class="not-prose font-mono">
             <div class="column text-gray-400 text-sm">
                 <h5>Date</h5>
@@ -7,12 +7,12 @@
             </div>
         <ul>
             <li
-                v-for="post in data" 
+                v-for="post in posts" 
                 :key="post.title"> 
              <NuxtLink 
                 :to="post._path"
                 class="column hover:bg-gray-100 dark:hover:bg-gray-800"> 
-                <div class="text-gray-500 text-sm">2023</div> 
+                <div :class="{'invisible' : !post.displayYear, 'text-gray-400 dark:text-gray-500' : post.displayYear}">2023</div> 
                 <div>{{ post.title }}</div> 
             </NuxtLink> 
             </li>
@@ -26,8 +26,31 @@
  const { data } = await useAsyncData('blog-list', 
  () => queryContent('/blog')
  .where({_path: {$ne: '/blog'}})
- .only(['_path', 'title', 'date'])
+ .only(['_path', 'title', 'publishedAt'])
+ .sort({publishedAt: -1})
  .find()); 
+
+ const posts = computed( () => {
+    if(!data.value){
+        return []
+    }
+
+    const result = []
+    let lastYear = null;
+
+    for (const p of data.value){
+        const year = new Date(p.publishedAt).getFullYear();
+        console.log(year);
+        const displayYear = year != lastYear;
+        p.displayYear = displayYear
+        result.push(p);
+        lastYear = year;
+    }
+
+    return data.value
+ })
+
+console.log(data);
 
 </script>
 
