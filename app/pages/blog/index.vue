@@ -14,6 +14,6 @@
 </template>
 
 <script setup>
- const { data, error  } = await ('blog-list', () => queryContent('/blog').only(['_path', 'title']).find()); 
+ const { data, error } = await useAsyncData('blog-list', () => queryContent('/blog').only(['_path', 'title']).find()); 
 
 </script>
