@@ -1,6 +1,6 @@
 <template>
     <div v-if="data">
-        <section>
+        <section class="not-prose">
         <ul>
             <li class="rounded-lg border-gray-700 dark:border-gray-100 mb-4 border py-4 px-4"
                 v-for="(post, index) in data" 
