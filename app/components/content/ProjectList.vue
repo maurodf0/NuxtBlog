@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <p class="mb-10">Take a looh at my GitHub Projects</p>
-
+    <div class="not-prose">
         <section v-if="pending">Loading...</section>
         <section v-else-if="error">Something went wrong, try again...</section>
         <section v-else >
