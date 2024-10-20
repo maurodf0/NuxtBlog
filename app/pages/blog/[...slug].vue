@@ -24,7 +24,35 @@
     </article>
 </template>
 <script setup >
-    const route = useRoute();
+
+    onMounted( () => {
+        const callback = (entries) => {
+            entries.forEach( entry => {
+                if(entry.isIntersecting){
+                    activeId.value = entry.target.id
+                }
+            })
+        }
+        const observer = new IntersectionObserver(callback, {
+        threshold: 0.5,
+        root: null
+        });
+
+        const elements = document.querySelectorAll('h2, h3');
+
+        elements.forEach( e => {
+            observer.observe(e);
+        } )
+
+        onBeforeUnmount( () => {
+            elements.forEach( el => {
+                observer.unobserve(el);
+            })
+        })
+
+     })
+
+  
     
     
 </script>
