@@ -7,7 +7,16 @@
                     <ContentRenderer :value="doc" />
                 </div>
                 <div v-if="doc.toc" class="col-span-2">
-                    <pre>{{ doc.body.toc.links }}</pre>
+             
+                        <aside class="sticky top-8">
+                            <div class="font-semibold mb-2">
+                                Table of contents
+                            </div>
+                            <nav>
+                                <TocLinks :links="doc.body.toc.links" />
+                            </nav>
+                        </aside>
+    
                 </div>
             </div>
        
