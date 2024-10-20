@@ -1,8 +1,13 @@
 <template>
     <article 
     class="prose max-w-none dark:prose-invert prose-pre:bg-white prose-pre:text-gray-800 dark:prose-pre:text-gray-200 dark:prose-pre:bg-gray-800">
-        <ContentDoc v-slot="{ doc }">
-            <div class="grid grid-cols-6 gap-16">
+        <ContentDoc>
+            <template #not-found>
+             <h1>Nothing Found (404)</h1>
+             <p>Blog post not found</p>
+            </template>
+            <template  v-slot="{ doc }">
+                <div class="grid grid-cols-6 gap-16">
                 <div :class="{'col-span-4': doc.toc, 'col-span-6': !doc.toc}">
                     <ContentRenderer :value="doc" />
                 </div>
@@ -19,6 +24,8 @@
     
                 </div>
             </div>
+            </template>
+          
        
         </ContentDoc>
     </article>
