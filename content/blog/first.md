@@ -1,7 +1,8 @@
 ---
 title: 'Title of the page'
 description: 'meta description of the page'
-publishedAt: 2023-10-18 00:09:52
+publishedAt: 2023-10-18 00:09:52,
+toc: true,
 head:
   meta:
     - name: 'keywords'
