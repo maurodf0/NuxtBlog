@@ -15,7 +15,7 @@
 }
 .page-enter-from,
 .page-leave-to {
-  opacity: 0.25;
+  opacity: 0;
   transform: translateY(40px);
 }
 </style>
