@@ -13,7 +13,7 @@
                                 Table of contents
                             </div>
                             <nav>
-                                <TocLinks :links="doc.body.toc.links" />
+                                <TocLinks :links="doc.body.toc.links" :activeId="activeId" />
                             </nav>
                         </aside>
     
@@ -24,6 +24,7 @@
     </article>
 </template>
 <script setup >
+const activeId = ref(null);
 
     onMounted( () => {
         const callback = (entries) => {
