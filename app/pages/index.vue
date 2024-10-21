@@ -1,33 +1,33 @@
 <template>
-    <div>
-        Hello from Nuxt
-    </div>
+  <div class="wrapper">
+      <article class=" max-w-none mb-10 prose dark:prose-invert prose-h1:text-5xl">
+        <ContentDoc path="/" />
+      </article>
+          <div class="flex gap-4">
+              <button @click="enableCustomLayout">Update Layout</button>
+              <button @click="defaultLayout">Go Back Layout</button>
+          </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Homepage',
-  description: 'Some New Nuxt Content',
-  ogTitle: '[og:title]',
-  ogDescription: '[og:description]',
-  ogImage: '[og:image]',
-  ogUrl: '[og:url]',
-  twitterTitle: '[twitter:title]',
-  twitterDescription: '[twitter:description]',
-  twitterImage: '[twitter:image]',
-  twitterCard: 'summary'
-})
 
-useHead({
-  htmlAttrs: {
-    lang: 'it'
-  },
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon.png'
-    }
-  ]
-})
+  //change layout dinamically
+  const enableCustomLayout = () => {
+      setPageLayout('another');
+  }
+
+  const defaultLayout = () => {
+      setPageLayout('default');
+  }
+
+  //change layout ofr single page
+  // definePageMeta({
+  //     layout: 'another'
+  // })
+
+  useHead({
+      title: 'About Page'
+  })
+
 </script>
