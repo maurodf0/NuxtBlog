@@ -34,6 +34,8 @@
 const activeId = ref(null);
 
     onMounted( () => {
+        let elements = [];
+
         const callback = (entries) => {
             entries.forEach( entry => {
                 if(entry.isIntersecting){
@@ -42,11 +44,13 @@ const activeId = ref(null);
             })
         }
         const observer = new IntersectionObserver(callback, {
-        threshold: 0.5,
+        threshold: 0.1,
         root: null
         });
 
-        const elements = document.querySelectorAll('h2, h3');
+        setTimeout( () => {
+        
+        elements = document.querySelectorAll('h2, h3');
 
         elements.forEach( e => {
             observer.observe(e);
@@ -58,6 +62,7 @@ const activeId = ref(null);
             })
         })
 
+        }, 250)
      })
 
   
