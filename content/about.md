@@ -5,25 +5,25 @@ description: 'meta description of the page'
 
 ## About me
 
-I'm Mauro, I'm a web developer and UI Designer, Marketing oriented 🥑.
+I'm Mauro, I'm a web developer and UI Designer, Marketing 🥑.
 
-## What I teach on Udemy
+Expert in WordPress and Shopify, I specialize in crafting customized solutions with minimalist and aesthetically impactful UIs. Passionate about delivering dynamic and engaging user experiences, optimized for fast and efficient performance. Skilled in Vue.js, GSAP, Nuxt, and WordPress theme development.
 
-I teach mostly web development and I have courses on:
+## What I use
 
-- Laravel (PHP framework)
-- Laravel & Vue & Inertia (PHP framework/JavaScript frontend framework)
-- Symfony (PHP framework)
-- NestJS (Node.js framework)
+I use and love:
+
+- WordPress (PHP CMS)
+- Vue (JS Framework)
 - Nuxt 3 (JavaScript Full-stack framework)
+- Php
+- GSAP
+- Three.js
 
 ## What software/hardware do I use?
 
 Here's a list of everyday used software and hardware:
 
-- MacBook Pro 16 2021
-- Rode NT USB microphone
+- MacBook Pro M2 Pro
 - VSCode
-- Chrome
-- ScreenFlow (Mac only)
-- Docker
+- Edge
