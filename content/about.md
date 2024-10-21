@@ -5,7 +5,7 @@ description: 'meta description of the page'
 
 ## About me
 
-I'm Piotr, I'm a developer and a Udemy Instructor. I'm 36, living in southern Poland with my wife and 2  golden retrievers. I'm vegan and pro-animal 🥑.
+I'm Mauro, I'm a web developer and UI Designer, Marketing oriented 🥑.
 
 ## What I teach on Udemy
 
