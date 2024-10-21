@@ -1,6 +1,6 @@
 <template>
     <nav class="font-mono">
-                <ul class="flex gap-4">
+                <ul class="flex flex-col md:flex-row px-2 md:gap-4">
                     <li>
                         <NuxtLink to="/">Main</NuxtLink>
                     </li>
@@ -20,7 +20,7 @@
 <style scoped>
 
     nav li a {
-        @apply p-1 hover:bg-gray-200 dark:hover:bg-gray-800
+        @apply p-1 hover:bg-gray-200 dark:hover:bg-gray-800 
     }
 
 </style>
