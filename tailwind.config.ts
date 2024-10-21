@@ -17,14 +17,6 @@ module.exports = {
                 'text-decoration': 'none', // No underline on links
               },
             },
-            '@media (prefers-color-scheme: dark)': {
-              'h2': {
-                color: theme('colors.white'), // White text in dark mode
-                a: {
-                  color: theme('colors.white'), // Ensure links are also white
-                },
-              },
-            },
           },
         },
       }),
