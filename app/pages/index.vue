@@ -3,10 +3,6 @@
       <article class=" max-w-none mb-10 prose dark:prose-invert prose-h1:text-5xl">
         <ContentDoc path="/" />
       </article>
-          <div class="flex gap-4">
-              <button @click="enableCustomLayout">Update Layout</button>
-              <button @click="defaultLayout">Go Back Layout</button>
-          </div>
   </div>
 </template>
 
