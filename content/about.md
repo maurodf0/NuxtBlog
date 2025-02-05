@@ -21,8 +21,9 @@ I use and love:
 - Three.js
 
 Wanna learning:
-- Laravel
-- React
+- Laravel (PHP Back-end Framework)
+- React (JS Framework)
+- Inertia
 
 ## What software/hardware do I use?
 
